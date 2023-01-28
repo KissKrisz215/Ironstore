@@ -29,7 +29,7 @@ items.forEach((item,i)=>{
     list.innerHTML += `<li>
         <div>Name: ${item.name}</div>
         <div>price: $${item.price}</div>
-        <image src="${item.image}" />
+        <img src="${item.image}" />
         <input type="number" placeholder="quantity" onchange='inputChange(${i}, "${item.name}", "${item.price}", "${item.image}")'/>
         <button>Buy Item</button>
     </li>`
