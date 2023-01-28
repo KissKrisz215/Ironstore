@@ -34,3 +34,22 @@ items.forEach((item,i)=>{
         <button>Buy Item</button>
     </li>`
 })
+
+function inputChange(i, name, price,image) {
+    console.log('I want to buy the ',i,' item named, ',name, ' that costs $',price)
+    let listItem = document.querySelectorAll('li')[i]
+    let input = listItem.querySelector('input')
+    let button = listItem.querySelector('button')
+
+    button.onclick = function(){
+        cart.push({
+            quantity: input.value,
+            name: name,
+            price: price,
+            image: image
+        })
+        console.log(cart)
+        showCart()
+    }
+
+}
