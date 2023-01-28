@@ -63,7 +63,7 @@ function showCart() {
         cartItems.innerHTML += `<li>
             <div>Name: ${item.name}</div>
             <div>Quantity: ${item.quantity}</div>
-            <image src="${item.image}" />
+            <img src="${item.image}" />
         </li>`
     })
 
