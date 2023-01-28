@@ -20,3 +20,17 @@ let items = [
       image: 'https://d0bb7f9bf11b5ad1a6b2-6175f06f5e3f64e15abbf67415a276ec.ssl.cf1.rackcdn.com/product-images/designlab/11-oz-traditional-ceramic-coffee-mugs-7102-white1582888132.jpg'
     },
   ]
+
+  let cart = []
+
+let list = document.querySelector('#items')
+
+items.forEach((item,i)=>{
+    list.innerHTML += `<li>
+        <div>Name: ${item.name}</div>
+        <div>price: $${item.price}</div>
+        <image src="${item.image}" />
+        <input type="number" placeholder="quantity" onchange='inputChange(${i}, "${item.name}", "${item.price}", "${item.image}")'/>
+        <button>Buy Item</button>
+    </li>`
+})
